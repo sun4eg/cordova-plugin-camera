@@ -27,6 +27,7 @@ function takePicture (success, error, opts) {
     } else {
         var input = document.createElement('input');
         input.style.position = 'relative';
+        input.style.display = 'none';
         input.style.zIndex = HIGHEST_POSSIBLE_Z_INDEX;
         input.className = 'cordova-camera-select';
         input.type = 'file';
@@ -46,6 +47,7 @@ function takePicture (success, error, opts) {
         };
 
         document.body.appendChild(input);
+        input.click();
     }
 }
 
